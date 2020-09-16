@@ -21,3 +21,5 @@ display_info() {
   fi
   echo "Configuration parameters: $CONFIG_PARAMS"
 }
+
+display_info
