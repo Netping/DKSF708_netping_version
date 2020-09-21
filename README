@@ -1,0 +1,9 @@
+Display device name, firmware version and build time.
+For example:
+
+Project name: DKSF708
+Project version: 1.0
+Device name: NetPing SMS708
+OpenWrt version: 19
+Build version: 20200921191747
+Configuration parameters: dhcp, ssh, luci
