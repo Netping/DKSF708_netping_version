@@ -1,0 +1,11 @@
+config hardware 'hardware'
+	option project_name 'DKSF708'
+	option device_name 'NetPing SMS708'
+	option hardware_ver '1.0'
+	option device_serial_num '0'
+
+config software 'software'
+	option sw_major_ver '1'
+	option sw_minor_ver '0'
+	option openwrt_ver '19'
+	option build_time '0'
