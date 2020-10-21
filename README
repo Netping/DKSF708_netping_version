@@ -1,9 +1,18 @@
-Display device name, firmware version and build time.
-For example:
+NetPing_version package consists of two files.
+The netping-settings file stores information about software and hardware configuration of the device. 
+This file is in a uci-compatible format:
+config hardware 'hardware'
+	option project_name 'DKSF708'
+	option device_name 'NetPing SMS708'
+	option hardware_ver '1.0'
+	option device_serial_num '0'
 
-Project name: DKSF708
-Project version: 1.0
-Device name: NetPing SMS708
-OpenWrt version: 19
-Build version: 20200921191747
-Configuration parameters: dhcp, ssh, luci
+config software 'software'
+	option sw_major_ver '1'
+	option sw_minor_ver '0'
+	option openwrt_ver '19'
+	option build_time '0' 
+
+The np_version.sh script fills in the missing information at system startup: 
+- date and time of the rootfs build, 
+- if you run the script with command line argument "--init", then the information about device serial number will be filled in.
